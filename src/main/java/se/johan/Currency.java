@@ -1,5 +1,6 @@
 package se.johan;
 
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class Currency {
@@ -54,6 +55,7 @@ public class Currency {
 
 }
 
+    static LocalDateTime myObj = LocalDateTime.now();
     public static double SEKtoUSD = 0.095;
     public static double USDtoSEK = 10.50;
     public static double SEKtoEURO = 0.089;
@@ -65,7 +67,7 @@ public class Currency {
         double sekAmount = scanner.nextDouble();
         double usdAmount = sekAmount * SEKtoUSD;
         System.out.println(sekAmount + " SEK is equal to " + usdAmount + " USD");
-
+        System.out.println(myObj);
         }
         public static void convertUSDtoSEK() {
     Scanner scanner = new Scanner(System.in);
@@ -73,6 +75,7 @@ public class Currency {
     double usdAmount = scanner.nextDouble();
     double sekAmount = usdAmount * USDtoSEK;
         System.out.println(usdAmount + " USD is equal to " + sekAmount + " SEK");
+        System.out.println(myObj);
     }
     public static void convertSEKtoEURO(){
         Scanner scanner = new Scanner(System.in);
@@ -80,6 +83,7 @@ public class Currency {
     double sekAmount = scanner.nextDouble();
     double euroAmount = sekAmount * SEKtoEURO;
         System.out.println(sekAmount + " SEK is equal to " + euroAmount + " ERUO");
+        System.out.println(myObj);
 }
 public static void convertEUROtoSEK(){
         Scanner scanner = new Scanner(System.in);
@@ -87,6 +91,7 @@ public static void convertEUROtoSEK(){
         double euroAmount = scanner.nextDouble();
         double sekAmount = euroAmount * EUROtoSEK;
         System.out.println(euroAmount + " EURO is equal to " + sekAmount + " SEK");
+        System.out.println(myObj);
     }
 }
 
