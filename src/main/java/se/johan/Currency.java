@@ -1,6 +1,5 @@
 package se.johan;
 
-import java.awt.*;
 import java.util.Scanner;
 
 public class Currency {
@@ -24,21 +23,25 @@ public class Currency {
             switch (choice){
 
             case 1:
-                convert SEKtoUSD();
-                break;
+                convertSEKtoUSD();
 
+                break;
             case 2:
-                convert USDtoSEK():
+                convertUSDtoSEK();
+
                 break;
             case 3:
-                convert SEKtoERUO():
+                convertSEKtoEURO();
+
                 break;
             case 4:
-                convert EUROtoSEK():
+                convertEUROtoSEK();
+
                 break;
 
                 case 5:
-                    System.out.println("thank you!");
+
+                    System.out.println("Exiting Application");
                     scanner.close();
                     return;
                 default:
@@ -50,3 +53,42 @@ public class Currency {
     }
 
 }
+
+    public static double SEKtoUSD = 0.095;
+    public static double USDtoSEK = 10.50;
+    public static double SEKtoEURO = 0.089;
+    public static double EUROtoSEK = 11.28;
+
+    public static void convertSEKtoUSD (){
+    Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the amount in SEK");
+        double sekAmount = scanner.nextDouble();
+        double usdAmount = sekAmount * SEKtoUSD;
+        System.out.println(sekAmount + " SEK is equal to " + usdAmount + " USD");
+
+        }
+        public static void convertUSDtoSEK() {
+    Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the amount in USD");
+    double usdAmount = scanner.nextDouble();
+    double sekAmount = usdAmount * USDtoSEK;
+        System.out.println(usdAmount + " USD is equal to " + sekAmount + " SEK");
+    }
+    public static void convertSEKtoEURO(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the amount in SEK");
+    double sekAmount = scanner.nextDouble();
+    double euroAmount = sekAmount * SEKtoEURO;
+        System.out.println(sekAmount + " SEK is equal to " + euroAmount + " ERUO");
+}
+public static void convertEUROtoSEK(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the amount in EURO");
+        double euroAmount = scanner.nextDouble();
+        double sekAmount = euroAmount * EUROtoSEK;
+        System.out.println(euroAmount + " EURO is equal to " + sekAmount + " SEK");
+    }
+}
+
+
+
